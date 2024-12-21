@@ -1,0 +1,40 @@
+import Image from "next/image";
+import React from "react";
+
+const Page = () => {
+  return (
+    <div className="container py-16 flex flex-col items-center gap-10 px-16">
+      <div className="flex flex-col items-center">
+        <h1 className="font-lato text-4xl text-center font-bold">About Us</h1>
+        <p className="max-w-2xl text-center text-slate-500 mt-4">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos mollitia
+          nihil vitae voluptate, aut est expedita repellendus reprehenderit.
+        </p>
+      </div>
+
+      <div className="flex justify-between gap-8">
+        <Image
+          src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="demo"
+          width={400}
+          height={300}
+          className="rounded-lg"
+        />
+        <div className="">
+          <p className="max-w-xl text-slate-500">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Dignissimos totam nulla iste magni minima hic tenetur veniam
+            mollitia, adipisci ratione, unde nostrum ea. Reprehenderit et totam,
+            quaerat rem minus dolorum esse? Laboriosam ipsam est beatae,
+            necessitatibus nihil magni repudiandae nisi?
+          </p>
+          <button className="bg-slate-100 rounded shadow-md mt-8 px-6 py-4 text-primary hover:bg-orange-200">
+            Get in Touch
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Page;
