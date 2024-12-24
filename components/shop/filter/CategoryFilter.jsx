@@ -53,7 +53,7 @@ const CategoryFilter = ({ categories, dictionary }) => {
 
   return (
     <div>
-      <h3 className="text-xl text-gray-800 mb-3 uppercase font-medium">
+      <h3 className="text-xl text-gray-800 dark:text-gray-200 mb-3 uppercase font-medium">
         {dictionary?.categories}
       </h3>
       {categories ? (
@@ -70,11 +70,11 @@ const CategoryFilter = ({ categories, dictionary }) => {
               />
               <label
                 htmlFor={category.category_code}
-                className="text-gray-600 ml-3 cursor-pointer"
+                className="text-gray-600 dark:text-gray-300 ml-3 cursor-pointer"
               >
                 {category.category_name}
               </label>
-              <span className="ml-auto text-gray-600 text-sm">
+              <span className="ml-auto text-gray-600 dark:text-gray-300 text-sm">
                 ({category.total_products})
               </span>
             </div>

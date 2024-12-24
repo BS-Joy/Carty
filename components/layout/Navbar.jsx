@@ -14,9 +14,9 @@ const Navbar = async ({ lang }) => {
   const { userId } = await auth();
 
   return (
-    <nav className="bg-dark dark:bg-primary">
+    <nav className="bg-dark dark:bg-primary hidden lg:block">
       <div className="container flex">
-        <div className="px-8 py-4 bg-primary dark:bg-dark dark:border-y dark:border-y-primary flex items-center cursor-pointer relative group text-white dark:hover:text-primary transition duration-500">
+        <div className="px-8 py-4 bg-primary dark:bg-dark dark:border-y dark:border-y-primary flex items-center cursor-pointer relative group text-white dark:hover:text-primary my-transition">
           <span className="">
             <FaBars />
           </span>

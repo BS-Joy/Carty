@@ -6,7 +6,7 @@ const Page = () => {
     <div className="container py-16 flex flex-col items-center gap-10 px-16">
       <div className="flex flex-col items-center">
         <h1 className="font-lato text-4xl text-center font-bold">About Us</h1>
-        <p className="max-w-2xl text-center text-slate-500 mt-4">
+        <p className="max-w-2xl text-center text-slate-500 dark:text-slate-400 mt-4">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos mollitia
           nihil vitae voluptate, aut est expedita repellendus reprehenderit.
         </p>
@@ -21,14 +21,17 @@ const Page = () => {
           className="rounded-lg"
         />
         <div className="">
-          <p className="max-w-xl text-slate-500">
+          <p className="max-w-xl text-slate-500 dark:text-slate-400">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Dignissimos totam nulla iste magni minima hic tenetur veniam
             mollitia, adipisci ratione, unde nostrum ea. Reprehenderit et totam,
             quaerat rem minus dolorum esse? Laboriosam ipsam est beatae,
             necessitatibus nihil magni repudiandae nisi?
           </p>
-          <button className="bg-slate-100 rounded shadow-md mt-8 px-6 py-4 text-primary hover:bg-orange-200">
+          <button
+            className="mt-8 bg-primary border border-primary text-white px-6 py-2 font-medium 
+                    rounded-md hover:shadow-night-button my-transition"
+          >
             Get in Touch
           </button>
         </div>

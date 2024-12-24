@@ -9,7 +9,8 @@ import { notFound } from "next/navigation";
 // import { dbConnect } from "@/services/mongo";
 // import { auth } from "@/auth";
 
-export const generateMetadata = async ({ params: { id } }) => {
+export const generateMetadata = async ({ params }) => {
+  const { id } = await params;
   // const product = await getProductById(id);
   const product = {
     id: "665f5e3bfb99260cb949f291",
@@ -91,7 +92,9 @@ const product = {
   },
 };
 
-const ProductDetailsPage = async ({ params: { id, lang } }) => {
+const ProductDetailsPage = async ({ params }) => {
+  const { id, lang } = await params;
+
   const dictionary = await getDictionary(lang);
   // const product = await getProductById(id);
   // const session = await auth();

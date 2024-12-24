@@ -20,7 +20,7 @@ const LoginNavLink = ({ lang, loginText, session }) => {
       {session ? (
         <button
           onClick={handleLogout}
-          className={`text-gray-200 hover:text-white transition duration-500 flex gap-1 items-center`}
+          className={`text-gray-200 hover:text-white my-transition flex gap-1 items-center`}
         >
           <FiLogOut />
           Log Out

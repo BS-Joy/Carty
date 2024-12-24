@@ -158,36 +158,42 @@ const OrderSummary = ({ lang, dictionary }) => {
   };
 
   return (
-    <div className="col-span-4 border border-gray-200 p-4 rounded">
-      <h4 className="text-gray-800 text-lg mb-4 font-medium uppercase">
+    <div className="col-span-4 border shadow-md dark:border-primary p-4 rounded">
+      <h4 className="text-gray-800 dark:text-gray-200 text-lg mb-4 font-medium uppercase">
         {dictionary?.order_summary}
       </h4>
       <div className="space-y-2">
         {carts?.map((cartItem) => (
           <div key={cartItem?.id} className="flex justify-between">
             <div>
-              <h5 className="text-gray-800 font-medium">{cartItem?.title}</h5>
-              <p className="text-sm text-gray-600">Size: {cartItem?.size}</p>
+              <h5 className="text-gray-800 dark:text-gray-300 font-medium">
+                {cartItem?.title}
+              </h5>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Size: {cartItem?.sizes[0]}
+              </p>
             </div>
-            <p className="text-gray-600">x{cartItem?.quantity}</p>
-            <p className="text-gray-800 font-medium">
-              ${cartItem?.total_price}
+            <p className="text-gray-600 dark:text-gray-300">
+              x{cartItem?.quantity || 2}
+            </p>
+            <p className="text-gray-800 dark:text-gray-300 font-medium">
+              ${cartItem?.total_price || 22}
             </p>
           </div>
         ))}
       </div>
 
-      <div className="flex justify-between border-b border-gray-200 mt-1 text-gray-800 font-medium py-3 uppercas">
-        <p>subtotal</p>
-        <p>$1280</p>
+      <div className="flex justify-between border-b border-gray-200 dark:border-gray-600 mt-1 text-gray-800 font-medium py-3 uppercas">
+        <p className="dark:text-gray-300">subtotal</p>
+        <p className="dark:text-gray-300">$1280</p>
       </div>
 
-      <div className="flex justify-between border-b border-gray-200 mt-1 text-gray-800 font-medium py-3 uppercas">
-        <p>shipping</p>
-        <p>Free</p>
+      <div className="flex justify-between border-b border-gray-200 dark:border-gray-600 mt-1 text-gray-800 font-medium py-3 uppercas">
+        <p className="dark:text-gray-300">shipping</p>
+        <p className="dark:text-gray-300">Free</p>
       </div>
 
-      <div className="flex justify-between text-gray-800 font-medium py-3 uppercas">
+      <div className="flex justify-between text-gray-800 dark:text-gray-300 font-medium py-3 uppercas">
         <p className="font-semibold">Total</p>
         <p>$1280</p>
       </div>
@@ -203,7 +209,7 @@ const OrderSummary = ({ lang, dictionary }) => {
           />
           <label
             htmlFor="aggrement"
-            className="text-gray-600 ml-3 cursor-pointer text-sm"
+            className="text-gray-600 dark:text-gray-400 ml-3 cursor-pointer text-sm"
           >
             {dictionary.have_agree}{" "}
             <Link href="#" className="text-primary">
@@ -214,7 +220,7 @@ const OrderSummary = ({ lang, dictionary }) => {
 
         <button
           type="submit"
-          className="block w-full py-3 px-4 text-center text-white bg-primary border border-primary rounded-md hover:bg-transparent hover:text-primary transition font-medium"
+          className="block w-full py-3 px-4 text-center text-white bg-primary border border-primary rounded-md hover:shadow-night-button my-transition font-medium"
         >
           Place order
         </button>

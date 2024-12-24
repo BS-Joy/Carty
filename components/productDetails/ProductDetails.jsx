@@ -27,7 +27,7 @@ const ProductDetails = async ({ product, dictionary, lang, isWished }) => {
 
       {/* basic details */}
       <div className="space-y-2">
-        <p className="text-gray-800 font-semibold space-x-2">
+        <p className="text-gray-800 dark:text-gray-300 font-semibold space-x-2">
           <span>{dictionary?.availability}: </span>
           <span className="text-green-600">
             {product?.availability ? (
@@ -38,22 +38,28 @@ const ProductDetails = async ({ product, dictionary, lang, isWished }) => {
           </span>
         </p>
         <p className="space-x-2">
-          <span className="text-gray-800 font-semibold">
+          <span className="text-gray-800 dark:text-gray-300 font-semibold">
             {dictionary?.brand}:{" "}
           </span>
-          <span className="text-gray-600">{product?.brand}</span>
+          <span className="text-gray-600 dark:text-gray-400">
+            {product?.brand}
+          </span>
         </p>
         <p className="space-x-2">
-          <span className="text-gray-800 font-semibold">
+          <span className="text-gray-800 dark:text-gray-300 font-semibold">
             {dictionary?.category}:{" "}
           </span>
-          <span className="text-gray-600">{category_name}</span>
+          <span className="text-gray-600 dark:text-gray-400">
+            {category_name}
+          </span>
         </p>
         <p className="space-x-2">
-          <span className="text-gray-800 font-semibold">
+          <span className="text-gray-800 dark:text-gray-300 font-semibold">
             {dictionary?.sku}:{" "}
           </span>
-          <span className="text-gray-600">{product?.sku}</span>
+          <span className="text-gray-600 dark:text-gray-400">
+            {product?.sku}
+          </span>
         </p>
       </div>
 
@@ -68,7 +74,9 @@ const ProductDetails = async ({ product, dictionary, lang, isWished }) => {
       </div>
 
       {/* summary */}
-      <p className="mt-4 text-gray-600">{product?.summary}</p>
+      <p className="mt-4 text-gray-600 dark:text-gray-300">
+        {product?.summary}
+      </p>
 
       <UserActions
         dictionary={dictionary}

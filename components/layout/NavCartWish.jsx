@@ -1,4 +1,3 @@
-// import { auth } from "@/auth";
 // import { getCartsByUser, getWishListByUser } from "@/db/queries";
 import { FaCartShopping, FaHeart } from "react-icons/fa6";
 import Link from "next/link";

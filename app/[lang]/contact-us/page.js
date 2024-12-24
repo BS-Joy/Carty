@@ -1,8 +1,8 @@
 const ContactUsPage = () => {
   return (
     <div className="max-w-6xl mx-auto p-4">
-      <div className="bg-white shadow-md shadow-orange-200 p-8">
-        <h2 className="text-3xl text-gray-800 font-extrabold text-center mb-12">
+      <div className="  mt-8 mb-16 shadow-md  rounded-lg p-8">
+        <h2 className="text-3xl text-gray-800 dark:text-white font-extrabold text-center mb-12">
           Contact us
         </h2>
 
@@ -10,26 +10,26 @@ const ContactUsPage = () => {
           <input
             type="text"
             placeholder="Name"
-            className="w-full border rounded py-3 px-4 text-sm focus:outline-primary"
+            className="w-full border dark:border-primary rounded py-3 px-4 text-sm focus:outline focus:border-primary focus:outline-primary dark:text-primary"
           />
           <input
             type="email"
             placeholder="Email"
-            className="w-full border rounded py-3 px-4 text-sm focus:outline-primary"
+            className="w-full border dark:border-primary rounded py-3 px-4 text-sm focus:outline focus:border-primary focus:outline-primary dark:text-primary"
           />
           <input
             type="email"
             placeholder="Phone No."
-            className="w-full border rounded py-3 px-4 text-sm focus:outline-primary"
+            className="w-full border dark:border-primary rounded py-3 px-4 text-sm focus:outline focus:border-primary focus:outline-primary dark:text-primary"
           />
           <textarea
             placeholder="Message"
             rows="6"
-            className="w-full border rounded px-4 text-sm pt-3 focus:outline-primary"
+            className="w-full border dark:border-primary rounded px-4 text-sm pt-3 focus:outline focus:border-primary focus:outline-primary dark:text-primary"
           ></textarea>
           <button
             type="button"
-            className="text-white w-full bg-primary hover:bg-orange-600 rounded text-sm px-6 py-3 !mt-6"
+            className="text-white w-full bg-primary hover:shadow-night-button rounded text-sm px-6 py-3 !mt-6 my-transition"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +51,7 @@ const ContactUsPage = () => {
         </form>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mt-12">
-          <div className="flex flex-col items-center bg-white">
+          <div className="flex flex-col items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-6 fill-primary"
@@ -67,17 +67,17 @@ const ContactUsPage = () => {
               ></path>
             </svg>
             <div className="mt-4 text-center">
-              <h4 className="text-gray-800 text-base font-bold">
+              <h4 className="dark:text-slate-300 text-base font-bold">
                 Visit office
               </h4>
-              <p className="text-sm text-gray-500 mt-2">
+              <p className="text-sm text-gray-500 dark:text-slate-400 mt-2">
                 {" "}
                 123 Main Street, City, Country
               </p>
             </div>
           </div>
 
-          <div className="flex flex-col items-center bg-white">
+          <div className="flex flex-col items-center ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-6 fill-primary"
@@ -89,12 +89,14 @@ const ContactUsPage = () => {
               ></path>
             </svg>
             <div className="mt-4 text-center">
-              <h4 className="text-gray-800 text-base font-bold">Call us</h4>
+              <h4 className="dark:text-slate-300 text-base font-bold">
+                Call us
+              </h4>
               <p className="text-sm text-gray-500 mt-2"> +158 996 888</p>
             </div>
           </div>
 
-          <div className="flex flex-col items-center bg-white">
+          <div className="flex flex-col items-center ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-6 fill-primary"
@@ -110,12 +112,14 @@ const ContactUsPage = () => {
               ></path>
             </svg>
             <div className="mt-4 text-center">
-              <h4 className="text-gray-800 text-base font-bold">Chat to us</h4>
+              <h4 className="dark:text-slate-300 text-base font-bold">
+                Chat to us
+              </h4>
               <p className="text-sm text-gray-500 mt-2">info@example.com</p>
             </div>
           </div>
 
-          <div className="flex flex-col items-center bg-white">
+          <div className="flex flex-col items-center ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-6 fill-primary"
@@ -127,7 +131,7 @@ const ContactUsPage = () => {
               ></path>
             </svg>
             <div className="mt-4 text-center">
-              <h4 className="text-gray-800 text-base font-bold">Fax</h4>
+              <h4 className="dark:text-slate-300 text-base font-bold">Fax</h4>
               <p className="text-sm text-gray-500 mt-2">+1-548-2588</p>
             </div>
           </div>

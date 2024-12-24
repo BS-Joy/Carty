@@ -9,7 +9,7 @@ const Ads = () => {
         <Image
           src="/images/offer.jpg"
           alt="ads"
-          className="w-full rounded-md  shadow-md shadow-orange-300"
+          className="w-full rounded-md shadow-lg dark:shadow-night"
           width={1504}
           height={362}
           placeholder="blur"

@@ -5,7 +5,7 @@ import ProductCard from "../shop/product/ProductCard";
 
 const products = [
   {
-    _id: "665f5e3bfb99260cb949f291",
+    id: "665f5e3bfb99260cb949f291",
     title: "Vintage Leather Sofa",
     availability: true,
     stock: 1,
@@ -35,7 +35,7 @@ const products = [
     },
   },
   {
-    _id: "665f5e3bfb99260cb949f291",
+    id: "665f5e3bfb99260cb949f292",
     title: "Vintage Leather Sofa",
     availability: true,
     stock: 1,
@@ -65,7 +65,7 @@ const products = [
     },
   },
   {
-    _id: "665f5e3bfb99260cb949f291",
+    id: "665f5e3bfb99260cb949f293",
     title: "Vintage Leather Sofa",
     availability: true,
     stock: 1,
@@ -95,7 +95,7 @@ const products = [
     },
   },
   {
-    _id: "665f5e3bfb99260cb949f291",
+    id: "665f5e3bfb99260cb949f294",
     title: "Vintage Leather Sofa",
     availability: true,
     stock: 1,
@@ -135,7 +135,7 @@ const TrendingProducts = async ({ lang }) => {
   // );
   return (
     <div className="container pb-16">
-      <h2 className="text-2xl font-medium text-gray-800 uppercase mb-6">
+      <h2 className="text-2xl font-medium text-gray-800 dark:text-white uppercase mb-6">
         {dictionary?.trending_products}
       </h2>
       {products?.length > 0 ? (

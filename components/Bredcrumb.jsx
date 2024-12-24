@@ -8,10 +8,10 @@ const Bredcrumb = ({ path }) => {
       <Link href="/" className="text-primary text-base">
         <FaHouse />
       </Link>
-      <span className="text-sm text-gray-400">
+      <span className="text-sm text-gray-400 dark:text-gray-200">
         <FaChevronRight />
       </span>
-      <p className="text-gray-600 font-medium">{path}</p>
+      <p className="text-gray-600 dark:text-primary font-medium">{path}</p>
     </div>
   );
 };

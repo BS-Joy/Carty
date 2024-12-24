@@ -45,7 +45,7 @@ const CartProductList = ({ cartProducts, session, lang }) => {
         <div className="mt-8 flex justify-end space-y-4 max-w-6xl w-full mx-auto">
           <Link
             href={`/${lang}/checkout`}
-            className="px-6 py-2 flex items-center gap-2 text-center text-sm text-primary border border-primary rounded hover:text-white hover:bg-primary hover:border-primary transition duration-500 uppercase font-roboto font-medium"
+            className="px-6 py-2 flex items-center gap-2 text-center text-sm text-primary border border-primary rounded hover:text-white hover:bg-primary hover:border-primary my-transition uppercase font-roboto font-medium"
           >
             Proceed to Checkout
             <FaArrowRight />

@@ -15,7 +15,7 @@ const RootNotFound = () => {
         </p>
         <Link
           href="/en"
-          className="flex items-center space-x-2 border border-primary bg-primary hover:bg-white hover:text-primary hover:border hover:border-primary text-gray-100 px-4 py-2 mt-6 rounded transition duration-150"
+          className="flex items-center space-x-2 border border-primary bg-primary hover:bg-white hover:text-primary hover:border hover:border-primary text-gray-100 px-4 py-2 mt-6 rounded my-transition"
           title="Return Home"
         >
           <svg

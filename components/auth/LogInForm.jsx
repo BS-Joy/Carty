@@ -35,7 +35,10 @@ const LoginForm = ({ dictionary, lang, productId, quantity }) => {
       <div className="space-y-2">
         {/* email */}
         <div>
-          <label htmlFor="email" className="text-gray-600 mb-2 block">
+          <label
+            htmlFor="email"
+            className="text-gray-600 dark:text-gray-300 mb-2 block"
+          >
             {dictionary?.email}
           </label>
           <input
@@ -43,14 +46,17 @@ const LoginForm = ({ dictionary, lang, productId, quantity }) => {
             type="email"
             name="email"
             id="email"
-            className="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded focus:ring-0 focus:border-primary placeholder-gray-400"
+            className="block w-full border border-gray-300 dark:border-gray-500 px-4 py-3 text-gray-600 dark:text-primary text-sm rounded focus:ring-0 focus:border-primary dark:focus:outline-none dark:focus:border dark:focus:border-primary placeholder-gray-400"
             placeholder="youremail.@domain.com"
           />
         </div>
 
         {/* password */}
         <div>
-          <label htmlFor="password" className="text-gray-600 mb-2 block">
+          <label
+            htmlFor="password"
+            className="text-gray-600 dark:text-gray-300 mb-2 block"
+          >
             {dictionary?.password}
           </label>
           <input
@@ -58,7 +64,7 @@ const LoginForm = ({ dictionary, lang, productId, quantity }) => {
             type="password"
             name="password"
             id="password"
-            className="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded focus:ring-0 focus:border-primary placeholder-gray-400"
+            className="block w-full border border-gray-300 dark:border-gray-500 px-4 py-3 text-gray-600 dark:text-primary text-sm rounded focus:ring-0 focus:border-primary dark:focus:outline-none dark:focus:border dark:focus:border-primary placeholder-gray-400"
             placeholder="*******"
           />
         </div>
@@ -75,7 +81,7 @@ const LoginForm = ({ dictionary, lang, productId, quantity }) => {
           />
           <label
             htmlFor="remember"
-            className="text-gray-600 ml-3 cursor-pointer"
+            className="text-gray-600 dark:text-gray-200 ml-3 cursor-pointer"
           >
             {dictionary?.remember_me}
           </label>

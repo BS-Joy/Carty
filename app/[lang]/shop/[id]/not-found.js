@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 const DetailNotFound = () => {
   const pathName = usePathname();
   const id = pathName.split("/")[3];
-  
+
   return (
     <div className="bg-gray-200 w-full px-16 md:px-0 h-screen flex items-center justify-center">
       <div className="bg-white border border-gray-200 flex flex-col items-center justify-center px-4 md:px-8 lg:px-24 py-8 rounded-lg shadow-2xl">
@@ -18,12 +18,12 @@ const DetailNotFound = () => {
         </p>
         <p className="text-gray-500 mt-4 pb-4 border-b-2 text-center">
           Sorry, the product with id{" "}
-          <span className="text-primary font-semibold">&ldquo;{id}&ldquo;</span> was not
-          found.
+          <span className="text-primary font-semibold">&ldquo;{id}&ldquo;</span>{" "}
+          was not found.
         </p>
         <Link
           href="/"
-          className="flex items-center space-x-2 border border-primary bg-primary hover:bg-white hover:text-primary hover:border hover:border-primary text-gray-100 px-4 py-2 mt-6 rounded transition duration-150"
+          className="flex items-center space-x-2 border border-primary bg-primary hover:bg-white hover:text-primary hover:border hover:border-primary text-gray-100 px-4 py-2 mt-6 rounded my-transition"
           title="Return Home"
         >
           <svg

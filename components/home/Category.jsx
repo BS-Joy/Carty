@@ -46,7 +46,7 @@ const Category = async ({ lang }) => {
   return (
     <>
       <div className="container py-16">
-        <h2 className="text-2xl font-medium text-gray-800 uppercase mb-6">
+        <h2 className="text-2xl font-medium text-gray-800 dark:text-white uppercase mb-6">
           {dictionary?.shop_by_category}
         </h2>
         {categories?.length > 0 ? (
@@ -68,7 +68,7 @@ const Category = async ({ lang }) => {
                   />
                   <Link
                     href="#"
-                    className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-60 transition duration-500"
+                    className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-60 my-transition"
                   >
                     {category?.category_name}
                   </Link>

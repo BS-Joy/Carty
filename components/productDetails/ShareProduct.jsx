@@ -31,21 +31,21 @@ const ShareProduct = ({ title }) => {
   };
   return (
     <div
-      className={`rounded-md mt-4 max-w-[403px] py-4 px-6 flex gap-8 border`}
+      className={`rounded-md shadow-md dark:border-primary mt-4 max-w-[403px] py-4 px-6 flex gap-8 border`}
     >
       <div className="flex flex-col">
         <h1 className="text-xl font-semibold">Share</h1>
 
         {/* social icons */}
         <div className="flex gap-3 mt-4">
-          <div className="text-gray-400 hover:text-primary hover:border-primary h-8 w-8 rounded-full border border-gray-300 flex items-center justify-center">
+          <div className="text-gray-400 dark:text-gray-300 dark:hover:text-primary hover:text-primary hover:border-primary h-8 w-8 rounded-full border border-gray-300 flex items-center justify-center">
             <FacebookShareButton url={pageUrl} hashtag="#lwsKart">
               <FaFacebook />
             </FacebookShareButton>
           </div>
           <div
             href="#"
-            className="text-gray-400 hover:text-primary hover:border-primary h-8 w-8 rounded-full border border-gray-300 flex items-center justify-center"
+            className="text-gray-400 dark:text-gray-300 dark:hover:text-primary hover:text-primary hover:border-primary h-8 w-8 rounded-full border border-gray-300 flex items-center justify-center"
           >
             <TwitterShareButton
               url={pageUrl}
@@ -55,7 +55,7 @@ const ShareProduct = ({ title }) => {
               <FaXTwitter />
             </TwitterShareButton>
           </div>
-          <div className="text-gray-400 hover:text-primary hover:border-primary h-8 w-8 rounded-full border border-gray-300 flex items-center justify-center">
+          <div className="text-gray-400 dark:text-gray-300 dark:hover:text-primary hover:text-primary hover:border-primary h-8 w-8 rounded-full border border-gray-300 flex items-center justify-center">
             <WhatsappShareButton url={pageUrl}>
               <FaWhatsapp />
             </WhatsappShareButton>
@@ -65,7 +65,7 @@ const ShareProduct = ({ title }) => {
 
       <div className="flex flex-col">
         <h1 className="text-xl font-semibold">Copy Link</h1>
-        <div className="flex gap-3 bg-gray-100 px-3 py-2 my-2 rounded">
+        <div className="flex gap-3 bg-gray-100 dark:bg-gray-500 px-3 py-2 my-2 rounded">
           <p className="">
             {pageUrl?.length > 15 ? `${pageUrl?.slice(0, 19)}...` : pageUrl}
           </p>

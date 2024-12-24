@@ -22,7 +22,7 @@ const Hero = async ({ lang = "en" }) => {
             <Link
               href="#"
               className="bg-primary border border-primary text-white px-8 py-3 font-medium 
-                    rounded-md hover:bg-transparent hover:text-primary transition duration-500"
+                    rounded-md hover:shadow-night-button my-transition"
             >
               {dictionary?.shop_now}
             </Link>

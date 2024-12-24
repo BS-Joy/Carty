@@ -108,7 +108,7 @@ const RelatedProducts = async ({
 
   return (
     <div className="container pb-16">
-      <h2 className="text-2xl font-medium text-gray-800 uppercase mb-6">
+      <h2 className="text-2xl font-medium text-gray-800 dark:text-gray-200 uppercase mb-6">
         Related products
       </h2>
       {relatedProducts?.length > 0 ? (

@@ -3,7 +3,8 @@ import Bredcrumb from "@/components/Bredcrumb";
 import CheckoutContainer from "@/components/checkout/CheckoutContainer";
 import { getDictionary } from "@/app/dictionaries/dictionaries";
 
-const CheckoutPage = async ({ params: { lang } }) => {
+const CheckoutPage = async ({ params }) => {
+  const { lang } = await params;
   // const session = await auth();
   // if (!session?.user?.email) {
   //   redirect(`/${lang}/login`);

@@ -28,3 +28,13 @@
     @apply block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded placeholder-gray-400 focus:border-primary focus:ring-0;
   }
 }
+
+@layer utilities {
+  .my-transition {
+    @apply transition duration-500;
+  }
+
+  .input_field {
+    @apply block w-full border border-gray-300 dark:border-gray-500 px-4 py-3 text-gray-600 dark:text-primary text-sm rounded focus:ring-0 focus:border-primary dark:focus:outline-none dark:focus:border dark:focus:border-primary placeholder-gray-400;
+  }
+}

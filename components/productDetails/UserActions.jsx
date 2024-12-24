@@ -74,7 +74,7 @@ const UserActions = ({
             stock={stock}
           />
           <div className="flex flex-col">
-            <h4 htmlFor="phone" className="text-gray-600">
+            <h4 htmlFor="phone" className="text-gray-600 dark:text-gray-200">
               Sizes
             </h4>
 
@@ -85,9 +85,9 @@ const UserActions = ({
                     onClick={() => {
                       setSelectedSize(size);
                     }}
-                    className={`text-sm border border-gray-200 rounded-sm h-6 px-5 cursor-pointer shadow-sm text-gray-600 hover:bg-primary hover:border-primary hover:text-white ${
+                    className={`text-sm border border-gray-200 rounded-sm h-6 px-5 cursor-pointer shadow-sm text-gray-600 dark:text-gray-300 hover:bg-primary hover:border-primary hover:text-white dark:hover:text-white ${
                       selectedSize === size &&
-                      "bg-primary border-primary text-white"
+                      "bg-primary border-primary text-white dark:text-white"
                     }`}
                     key={size}
                   >
@@ -103,12 +103,12 @@ const UserActions = ({
       )}
 
       {/* user actions */}
-      <div className="mt-6 flex gap-3 border-b border-gray-200 pb-5 pt-5">
+      <div className="mt-6 flex gap-3 border-b border-gray-200 dark:border-gray-500 pb-5 pt-5">
         <form action={handleAddToCart}>
           <button
             disabled={!stock}
             type="submit"
-            className={`bg-primary border border-primary text-white px-8 py-2 font-medium rounded uppercase flex items-center gap-2 hover:bg-transparent hover:text-primary transition disabled:cursor-not-allowed disabled:bg-red-400 disabled:hover:bg-red-400 disabled:hover:text-white`}
+            className={`bg-primary border border-primary text-white px-8 py-2 font-medium rounded uppercase flex items-center gap-2 hover:bg-transparent hover:text-primary dark:hover:font-semibold transition disabled:cursor-not-allowed disabled:bg-red-400 disabled:hover:bg-red-400 disabled:hover:text-white`}
           >
             <FaBagShopping /> {dictionary?.add_to_cart}
           </button>
@@ -117,7 +117,7 @@ const UserActions = ({
         <form action={handleWishList}>
           <button
             type="submit"
-            className="border border-gray-300 text-gray-600 px-8 py-2 font-medium rounded uppercase flex items-center gap-2 hover:text-primary hover:border-primary transition"
+            className="border border-gray-300 text-gray-600 dark:text-gray-300 dark:hover:text-primary px-8 py-2 font-medium rounded uppercase flex items-center gap-2 hover:text-primary hover:border-primary transition"
           >
             {isWished ? <FaTrash /> : <FaHeart />}{" "}
             {isWished

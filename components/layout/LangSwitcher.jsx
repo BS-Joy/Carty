@@ -53,7 +53,7 @@ const LangSwitcher = () => {
     <div
       ref={togglerRef}
       onClick={() => setIsOpen(!isOpen)}
-      className="text-center text-gray-700 hover:border-primary transition duration-500 relative cursor-pointer flex gap-2 items-center border px-4 rounded py-1"
+      className="text-center text-gray-700 hover:border-primary my-transition relative cursor-pointer flex gap-2 items-center border px-4 rounded py-1"
     >
       <div className="text-xl">
         <Image
@@ -69,7 +69,7 @@ const LangSwitcher = () => {
         <FaAngleDown />
       </span>
       <div
-        className={`absolute bg-white dark:bg-black dark:text-white rounded hover:border-primary transition duration-500 top-[30px] right-0 w-full border ${
+        className={`absolute bg-white dark:bg-black dark:text-white rounded hover:border-primary my-transition top-[30px] right-0 w-full border ${
           isOpen ? "visible" : "hidden"
         } z-10`}
       >

@@ -14,11 +14,11 @@ const SigninPage = async ({ params }) => {
 
     // </div>
     <div className="container py-16">
-      <div className="max-w-lg mx-auto shadow-md shadow-orange-200 px-6 py-7 rounded overflow-hidden">
+      <div className="max-w-lg mx-auto shadow-md border dark:border-primary px-6 py-7 rounded-md overflow-hidden">
         <h2 className="text-2xl uppercase font-medium mb-1">
           {dictionary?.login}
         </h2>
-        <p className="text-gray-600 mb-6 text-sm">
+        <p className="text-gray-600 dark:text-gray-300 mb-6 text-sm">
           {dictionary?.login_welcome}
         </p>
 
@@ -30,11 +30,12 @@ const SigninPage = async ({ params }) => {
         />
 
         {/* <!-- login with --> */}
-        <div className="mt-6 flex justify-center relative">
-          <div className="text-gray-600 uppercase px-3 bg-white z-10 relative">
+        <div className="mt-6 flex justify-center items-center relative">
+          <div className="w-full border-b-2 border-gray-200 dark:border-gray-600"></div>
+          <p className="w-full text-gray-600 dark:text-gray-300 uppercase px-3 bg-white dark:bg-transparent z-10 relative">
             {dictionary?.or_login}
-          </div>
-          <div className="absolute left-0 top-3 w-full border-b-2 border-gray-200"></div>
+          </p>
+          <div className="w-full border-b-2 border-gray-200 dark:border-gray-600"></div>
         </div>
 
         {/* external log in providers */}
@@ -42,7 +43,7 @@ const SigninPage = async ({ params }) => {
         <OauthProviders lang={lang} />
         {/* <!-- ./login with --> */}
 
-        <p className="mt-4 text-center text-gray-600">
+        <p className="mt-4 text-center text-gray-600 dark:text-gray-300">
           {dictionary?.dont_have_account}{" "}
           <Link href={`/${lang}/sign-up`} className="text-primary">
             {dictionary?.register_now}

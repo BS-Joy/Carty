@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
 const ProductQuantity = ({ dictionary, quantity, setQuantity, stock }) => {
-  const [stockOut, setStockOut] = useState(false)
+  const [stockOut, setStockOut] = useState(false);
   const handleCount = (todo) => {
     if (todo === "de") {
       setQuantity((prevQuantity) => {
@@ -20,22 +20,22 @@ const ProductQuantity = ({ dictionary, quantity, setQuantity, stock }) => {
   };
 
   useEffect(() => {
-    if(quantity === stock){
-      toast.error('You have reached the stock limit', {
-        position: 'bottom-center'
-      })
-      setStockOut(true)
+    if (quantity === stock) {
+      toast.error("You have reached the stock limit", {
+        position: "bottom-center",
+      });
+      setStockOut(true);
     } else {
-      setStockOut(false)
+      setStockOut(false);
     }
-  }, [quantity, stock])
-  
+  }, [quantity, stock]);
+
   return (
     <div className="mt-4">
-      <h3 className="text-sm text-gray-800 uppercase mb-1">
+      <h3 className="text-sm text-gray-800 dark:text-gray-200 uppercase mb-1">
         {dictionary?.quantity}
       </h3>
-      <div className="flex border border-gray-300 text-gray-600 divide-x divide-gray-300 w-max">
+      <div className="flex border border-gray-300 dark:border-gray-400 rounded text-gray-600 divide-x divide-gray-300 w-max">
         <button
           onClick={() => handleCount("de")}
           disabled={parseInt(quantity) === 1}

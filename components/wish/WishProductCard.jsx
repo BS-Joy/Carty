@@ -53,36 +53,38 @@ const WishProductCard = ({ product, lang }) => {
   };
 
   return (
-    <div className="flex items-center justify-between border gap-6 p-4 border-gray-200 rounded">
+    <div className="flex items-center justify-between border gap-6 p-4 rounded shadow dark:border-primary">
       {/* thumbnail */}
-      <div className="w-28">
-        <Image
-          src={product?.thumbnail}
-          alt="product 6"
-          className="w-full"
-          width={112}
-          height={83}
-        />
-      </div>
 
-      {/* details */}
-      <div className="w-1/3">
-        <Link href={`/${lang}/shop/${product?.product_id}`}>
-          <h2 className="text-gray-800 text-xl font-medium uppercase hover:text-primary transition">
-            {product?.title}
-          </h2>
-        </Link>
-        <p className="text-gray-500 text-sm">
-          Availability:{" "}
-          <span className="text-green-600">
-            {product?.availability ? "In Stock" : "Out of Stock"}
-          </span>
-        </p>
-      </div>
+      <div className="flex gap-6 items-center">
+        <div className="w-28">
+          <Image
+            src={product?.thumbnail}
+            alt="product 6"
+            className="w-full rounded"
+            width={112}
+            height={83}
+          />
+        </div>
 
-      {/* price */}
-      <div className="text-primary text-lg font-semibold">
-        $ {product?.price}
+        {/* details */}
+        <div>
+          <Link href={`/${lang}/shop/${product?.product_id}`}>
+            <h2 className="text-gray-800 dark:text-gray-300 text-xl font-medium uppercase hover:text-primary transition">
+              {product?.title}
+            </h2>
+          </Link>
+          <p className="text-gray-500 dark:text-gray-400 text-sm">
+            Availability:{" "}
+            <span className="text-green-600">
+              {product?.availability ? "In Stock" : "Out of Stock"}
+            </span>
+            {/* price */}
+            <div className="text-primary text-lg font-semibold">
+              $ {product?.price}
+            </div>
+          </p>
+        </div>
       </div>
 
       {/* buttons */}
@@ -90,7 +92,7 @@ const WishProductCard = ({ product, lang }) => {
         <form action={handleAddToCart}>
           <button
             type="submit"
-            className="px-6 flex items-center gap-2 py-2 text-center text-sm text-white bg-primary border border-primary rounded hover:bg-transparent hover:text-primary transition uppercase font-roboto font-medium"
+            className="px-6 flex items-center gap-2 py-2 text-center text-sm text-white bg-primary border border-primary rounded  my-transition uppercase font-medium hover:shadow-night-button hover:bg-primary hover:text-white"
           >
             <FaBagShopping />
             add to cart
@@ -100,7 +102,7 @@ const WishProductCard = ({ product, lang }) => {
         <form action={handleWishList}>
           <button
             type="submit"
-            className="px-6 flex items-center gap-2 py-2 text-center text-sm text-white bg-primary border border-primary rounded hover:bg-transparent hover:text-primary transition uppercase font-roboto font-medium"
+            className="px-6 flex items-center gap-2 py-2 text-center text-sm text-white bg-primary border border-primary rounded  my-transition uppercase font-medium hover:shadow-night-button hover:bg-primary hover:text-white"
           >
             <FaTrash />
             remove

@@ -63,7 +63,7 @@ const Search = ({ dictionary }) => {
         className="w-full border border-primary border-r-0 pl-12 py-3 pr-3 rounded-l-md focus:outline-none dark:bg-black"
         placeholder={dictionary?.search}
       />
-      <button className="bg-primary dark:hover:bg-orange-500 dark:hover:text-black border border-primary text-white px-8 rounded-r-md hover:bg-transparent hover:text-primary transition duration-500">
+      <button className="bg-primary dark:hover:bg-orange-500 dark:hover:text-black border border-primary text-white px-8 rounded-r-md hover:bg-transparent hover:text-primary my-transition">
         {dictionary?.search}
       </button>
     </div>
