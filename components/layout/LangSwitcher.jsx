@@ -6,7 +6,7 @@ import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { FaAngleDown } from "react-icons/fa6";
 
-const LangSwitcher = () => {
+const LangSwitcher = ({ mobileNav }) => {
   const [isOpen, setIsOpen] = useState(false);
   const togglerRef = useRef(null);
   const pathName = usePathname();
@@ -53,7 +53,7 @@ const LangSwitcher = () => {
     <div
       ref={togglerRef}
       onClick={() => setIsOpen(!isOpen)}
-      className="text-center text-gray-700 hover:border-primary my-transition relative cursor-pointer flex gap-2 items-center border px-4 rounded py-1"
+      className={`text-center text-gray-700 hover:border-primary my-transition relative cursor-pointer flex gap-2 items-center border px-4 rounded py-1`}
     >
       <div className="text-xl">
         <Image
@@ -69,9 +69,9 @@ const LangSwitcher = () => {
         <FaAngleDown />
       </span>
       <div
-        className={`absolute bg-white dark:bg-black dark:text-white rounded hover:border-primary my-transition top-[30px] right-0 w-full border ${
-          isOpen ? "visible" : "hidden"
-        } z-10`}
+        className={`absolute bg-white dark:bg-black dark:text-white rounded hover:border-primary my-transition ${
+          mobileNav ? "top-[42px]" : "top-[30px]"
+        } right-0 w-full border ${isOpen ? "visible" : "hidden"} z-10`}
       >
         <div
           onClick={() => handleLangChange("bn")}

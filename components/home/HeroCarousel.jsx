@@ -30,6 +30,7 @@ const HeroCarousel = (props) => {
                 alt="Hero Image"
                 width={1920}
                 height={600}
+                className="h-[300px] xl:h-[600px] aspect-video"
               />
             </div>
           ))}

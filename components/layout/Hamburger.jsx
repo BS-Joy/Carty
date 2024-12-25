@@ -19,9 +19,9 @@ const Hamburger = () => {
           checked={show}
           onChange={handleMobileNav}
         />
-        <div className="w-[50%] h-[2px] bg-black rounded-sm transition-all duration-300 origin-left translate-y-[0.45rem] peer-checked:rotate-[-45deg]"></div>
-        <div className="w-[50%] h-[2px] bg-black rounded-md transition-all duration-300 origin-center peer-checked:hidden"></div>
-        <div className="w-[50%] h-[2px] bg-black rounded-md transition-all duration-300 origin-left -translate-y-[0.45rem] peer-checked:rotate-[45deg]"></div>
+        <div className="w-[50%] h-[2px] bg-black dark:bg-white rounded-sm transition-all duration-300 origin-left translate-y-[0.45rem] peer-checked:rotate-[-45deg]"></div>
+        <div className="w-[50%] h-[2px] bg-black dark:bg-white rounded-md transition-all duration-300 origin-center peer-checked:hidden"></div>
+        <div className="w-[50%] h-[2px] bg-black dark:bg-white rounded-md transition-all duration-300 origin-left -translate-y-[0.45rem] peer-checked:rotate-[45deg]"></div>
       </div>
     </label>
   );

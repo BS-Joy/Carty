@@ -4,7 +4,7 @@ import { IoSunny } from "react-icons/io5";
 import { BsMoonStarsFill } from "react-icons/bs";
 import { useTheme } from "next-themes";
 
-export default function ThemeSwitcher() {
+export default function ThemeSwitcher({ mobileNav }) {
   const [mounted, setMounted] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
   const [isDark, setIsDark] = useState(resolvedTheme === "dark");
@@ -36,10 +36,18 @@ export default function ThemeSwitcher() {
           checked={isDark}
           onChange={handleTheme}
         />
-        <div className="absolute left-[1.5px]  top-0.5 flex h-5 w-5 items-center justify-center text-white opacity-100 transition-opacity peer-checked:opacity-0">
+        <div
+          className={`absolute left-[1.5px] ${
+            mobileNav ? "top-[11px]" : "top-0.5"
+          }  flex h-5 w-5 items-center justify-center text-white opacity-100 transition-opacity peer-checked:opacity-0`}
+        >
           <IoSunny />
         </div>
-        <div className="absolute left-[1.625rem] top-0.5 flex h-5 w-5 items-center justify-center text-white opacity-0 transition-opacity  peer-checked:opacity-100">
+        <div
+          className={`absolute left-[1.625rem] ${
+            mobileNav ? "top-3" : "top-0.5"
+          }  flex h-5 w-5 items-center justify-center text-white opacity-0 transition-opacity  peer-checked:opacity-100`}
+        >
           <BsMoonStarsFill size={".8rem"} />
         </div>
         {/* <span>With toggle icon</span> */}

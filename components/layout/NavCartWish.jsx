@@ -1,8 +1,9 @@
+"use client";
 // import { getCartsByUser, getWishListByUser } from "@/db/queries";
 import { FaCartShopping, FaHeart } from "react-icons/fa6";
 import Link from "next/link";
 
-const NavCartWish = async ({ dictionary, lang }) => {
+const NavCartWish = ({ dictionary, lang }) => {
   //   const session = await auth();
   //   const carts = await getCartsByUser(session?.user?.id || session?.user?._id);
   //   const wishes = await getWishListByUser(
@@ -13,7 +14,7 @@ const NavCartWish = async ({ dictionary, lang }) => {
   //     0
   //   );
   return (
-    <>
+    <div className="flex items-center gap-2">
       <Link
         href={`/${lang}/wish`}
         className={`text-center w-9 mr-2 ${
@@ -40,7 +41,7 @@ const NavCartWish = async ({ dictionary, lang }) => {
           {0}
         </div>
       </Link>
-    </>
+    </div>
   );
 };
 

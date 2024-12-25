@@ -42,6 +42,15 @@ const Header = async ({ lang }) => {
         </div>
         <Hamburger />
       </div>
+
+      {/* search bar */}
+      <div className="flex justify-center xl:hidden w-full mt-4">
+        <Suspense fallback={<p>loading...</p>}>
+          {/* <Search dictionary={dictionary} /> */}
+          <Search2 dictionary={dictionary} />
+          {/* <Search3 dictionary={dictionary} /> */}
+        </Suspense>
+      </div>
     </header>
   );
 };

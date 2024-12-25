@@ -9,20 +9,20 @@ const Hero = async ({ lang = "en" }) => {
       <HeroCarousel />
       <div className="absolute w-full h-full flex items-center top-0">
         <div className="container">
-          <h1 className="text-6xl text-gray-800 font-medium mb-4 capitalize font-lato">
+          <h1 className="text-xl lg:text-2xl xl:text-6xl text-center lg:text-start text-gray-800 font-medium mb-4 capitalize font-lato">
             best collection for <br /> home decoration
           </h1>
-          <p className="text-black">
+          <p className="text-black text-[12px] lg:text-sm lg:text-ellipsis text-center lg:text-start">
             Transform your living space with our curated <br /> collection of
             home decor essentials. From cozy bedroom <br /> furnishings to
             stylish living room accents, discover <br /> everything you need to
             create your perfect oasis.
           </p>
-          <div className="mt-12">
+          <div className="mt-12 flex justify-center lg:justify-start">
             <Link
               href="#"
-              className="bg-primary border border-primary text-white px-8 py-3 font-medium 
-                    rounded-md hover:shadow-night-button my-transition"
+              className="bg-primary border border-primary text-white xl:px-8 xl:py-3 font-medium 
+                    rounded-md hover:shadow-night-button my-transition text-sm xl:text-base px-4 py-2"
             >
               {dictionary?.shop_now}
             </Link>

@@ -50,7 +50,7 @@ const Category = async ({ lang }) => {
           {dictionary?.shop_by_category}
         </h2>
         {categories?.length > 0 ? (
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3">
             {categories.map((category) => (
               <Suspense key={category?.id} fallback={<ImageSkeleton />}>
                 <div
