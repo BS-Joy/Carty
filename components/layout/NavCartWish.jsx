@@ -19,7 +19,7 @@ const NavCartWish = ({ dictionary, lang }) => {
         href={`/${lang}/wish`}
         className={`text-center w-9 mr-2 ${
           lang === "bn" && "mr-6"
-        } text-gray-700 dark:text-white hover:text-primary dark:hover:text-primary transition relative flex flex-col items-center`}
+        } text-gray-700 dark:text-white hover:text-primary dark:hover:text-primary my-transition relative flex flex-col items-center`}
       >
         <FaHeart size={"1.4rem"} />
         <div className="text-xs leading-5">{dictionary?.wish}</div>
@@ -32,7 +32,7 @@ const NavCartWish = ({ dictionary, lang }) => {
       {/* cart link */}
       <Link
         href={`/${lang}/cart`}
-        className="text-center text-gray-700 dark:text-white hover:text-primary dark:hover:text-primary transition relative"
+        className="text-center text-gray-700 dark:text-white hover:text-primary dark:hover:text-primary my-transition relative"
       >
         <FaCartShopping size={"1.4rem"} />
         <div className="text-xs leading-5">{dictionary?.cart}</div>

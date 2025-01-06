@@ -24,23 +24,23 @@ const SizeFilter = ({ allCategories, selectedCategories, dictionary }) => {
     setSelectedSize(value);
   };
 
-  useEffect(() => {
-    const sizeParams = params.get("size");
-    if (sizeParams) {
-      const size = sizeParams.split("_").join(" ");
-      setSelectedSize(size);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const sizeParams = params.get("size");
+  //   if (sizeParams) {
+  //     const size = sizeParams.split("_").join(" ");
+  //     setSelectedSize(size);
+  //   }
+  // }, []);
 
-  useEffect(() => {
-    if (selectedSize && selectedCategories?.length > 0) {
-      params.set("size", selectedSize.split(" ").join("_"));
-    } else {
-      params.delete("size");
-    }
+  // useEffect(() => {
+  //   if (selectedSize && selectedCategories?.length > 0) {
+  //     params.set("size", selectedSize.split(" ").join("_"));
+  //   } else {
+  //     params.delete("size");
+  //   }
 
-    replace(`${pathName}?${params.toString()}`);
-  }, [selectedSize, selectedCategories]);
+  //   replace(`${pathName}?${params.toString()}`);
+  // }, [selectedSize, selectedCategories]);
 
   return (
     <div className="pt-4">

@@ -1,6 +1,7 @@
 import Empty from "../Empty";
 import { getDictionary } from "@/app/dictionaries/dictionaries";
 import ProductCard from "../shop/product/ProductCard";
+import ProductCard3 from "../shop/product/ProductCard3";
 // import { getWishListByUser } from "@/db/queries";
 
 const products = [
@@ -139,9 +140,9 @@ const TrendingProducts = async ({ lang }) => {
         {dictionary?.trending_products}
       </h2>
       {products?.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {products?.map((product) => (
-            <ProductCard
+            <ProductCard3
               key={product?.id}
               product={product}
               dictionary={dictionary}

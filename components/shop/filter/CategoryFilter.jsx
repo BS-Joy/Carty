@@ -28,28 +28,28 @@ const CategoryFilter = ({ categories, dictionary }) => {
     }
   };
 
-  useEffect(() => {
-    if (paramsCategory) {
-      const category = decodeURI(paramsCategory).split("|");
-      setQuery(category);
-    } else {
-      setQuery([]);
-    }
-  }, [paramsCategory]);
+  // useEffect(() => {
+  //   if (paramsCategory) {
+  //     const category = decodeURI(paramsCategory).split("|");
+  //     setQuery(category);
+  //   } else {
+  //     setQuery([]);
+  //   }
+  // }, [paramsCategory]);
 
-  useEffect(() => {
-    const pageParams = params.get("page");
-    if (query.length > 0) {
-      if (pageParams) {
-        params.set("page", 1);
-      }
-      params.set("category", encodeURI(query.join("|")));
-    } else {
-      params.delete("category");
-      params.delete("page");
-    }
-    replace(`${pathName}?${params.toString()}`);
-  }, [query]);
+  // useEffect(() => {
+  //   const pageParams = params.get("page");
+  //   if (query.length > 0) {
+  //     if (pageParams) {
+  //       params.set("page", 1);
+  //     }
+  //     params.set("category", encodeURI(query.join("|")));
+  //   } else {
+  //     params.delete("category");
+  //     params.delete("page");
+  //   }
+  //   replace(`${pathName}?${params.toString()}`);
+  // }, [query]);
 
   return (
     <div>

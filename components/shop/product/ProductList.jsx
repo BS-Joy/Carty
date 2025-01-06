@@ -2,11 +2,14 @@
 
 import { useEffect, useState } from "react";
 import { Suspense } from "react";
-import ProductCard from "./ProductCard";
+// import ProductCard from "./ProductCard";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import CardSkeleton from "@/components/loading/CardSkeleton";
 import Empty from "@/components/Empty";
 import PaginationComponent from "./Pagination";
+// import ProductCard2 from "./ProductCard2";
+import ProductCard3 from "./ProductCard3";
+// import PageLoader from "@/components/loading/PageLoader";
 
 const ProductList = ({
   total_products,
@@ -28,37 +31,43 @@ const ProductList = ({
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  useEffect(() => {
-    setCurrentPage(initialPage);
-  }, [initialPage]);
+  // useEffect(() => {
+  //   setCurrentPage(initialPage);
+  // }, [initialPage]);
 
-  useEffect(() => {
-    const pageParams = params.get("page");
-    if (pageParams) {
-      setCurrentPage(parseInt(pageParams));
-    }
-  }, []);
+  // useEffect(() => {
+  //   const pageParams = params.get("page");
+  //   if (pageParams) {
+  //     setCurrentPage(parseInt(pageParams));
+  //   }
+  // }, []);
 
-  useEffect(() => {
-    if (currentPage === 1) {
-      params.delete("page");
-      replace(`${pathName}?${params}`);
-    } else if (currentPage !== 1) {
-      params.set("page", currentPage);
-      replace(`${pathName}?${params}`);
-    } else {
-      params.delete("page");
-    }
-  }, [currentPage]);
+  // useEffect(() => {
+  //   if (currentPage === 1) {
+  //     params.delete("page");
+  //     replace(`${pathName}?${params}`);
+  //   } else if (currentPage !== 1) {
+  //     params.set("page", currentPage);
+  //     replace(`${pathName}?${params}`);
+  //   } else {
+  //     params.delete("page");
+  //   }
+  // }, [currentPage]);
 
   return (
     <div className="col-span-3">
       {products?.length > 0 ? (
         <>
-          <div className="grid md:grid-cols-3 grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {products?.map((product) => (
               <Suspense key={product.id} fallback={<CardSkeleton />}>
-                <ProductCard
+                {/* <ProductCard
+                  product={product}
+                  dictionary={dictionary}
+                  lang={lang}
+                  // wishList={wishList}
+                /> */}
+                <ProductCard3
                   product={product}
                   dictionary={dictionary}
                   lang={lang}

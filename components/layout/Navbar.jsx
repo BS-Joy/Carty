@@ -1,31 +1,27 @@
+"use client";
 import Link from "next/link";
-// import Dropdown from "./Dropdown";
+import Dropdown from "./Dropdown";
 // import { getAllCategories } from "@/db/queries";
 import { Suspense } from "react";
-import { getDictionary } from "@/app/dictionaries/dictionaries";
 import { FaBars } from "react-icons/fa6";
 import LoginNavLink from "./LogInNavLink";
 import { FaRegUser } from "react-icons/fa6";
-import { auth } from "@clerk/nextjs/server";
+import { useAuth } from "@clerk/nextjs";
 
-const Navbar = async ({ lang }) => {
-  const dictionary = await getDictionary(lang);
+const Navbar = ({ dictionary, lang, categories }) => {
   //   const categories = await getAllCategories();
-  const { userId } = await auth();
-
+  const { userId } = useAuth();
   return (
     <nav className="bg-dark dark:bg-primary hidden lg:block">
       <div className="container flex">
         <div className="px-8 py-4 bg-primary dark:bg-dark dark:border-y dark:border-y-primary flex items-center cursor-pointer relative group text-white dark:hover:text-primary my-transition">
-          <span className="">
-            <FaBars />
-          </span>
+          <FaBars />
           <span className="capitalize ml-2">{dictionary?.all_categories}</span>
 
           {/* <!-- dropdown --> */}
-          {/* <Suspense>
+          <Suspense>
             <Dropdown categories={categories} />
-          </Suspense> */}
+          </Suspense>
         </div>
 
         <div className="flex items-center justify-between flex-grow pl-12">

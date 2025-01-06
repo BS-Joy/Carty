@@ -10,6 +10,7 @@ import PriceFilter from "./PriceFilter";
 const MobileDrawer = ({ category, allCategories, dictionary }) => {
   const selectedCategories = category && decodeURI(category).split("|");
   const [isOpen, setIsOpen] = useState(false);
+
   const handleClose = () => {
     setIsOpen(false);
   };
@@ -19,7 +20,7 @@ const MobileDrawer = ({ category, allCategories, dictionary }) => {
       <div className="text-center md:hidden">
         <button
           onClick={() => setIsOpen(true)}
-          className="hover:text-white text-primary bg-gray-100 hover:bg-primary focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 block md:hidden"
+          className="hover:text-white text-primary bg-gray-100 hover:bg-primary focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-primary dark:text-white dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 block md:hidden"
           type="button"
         >
           <IoIosOptions size="1.5rem" />

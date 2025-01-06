@@ -12,7 +12,7 @@ const Hero = async ({ lang = "en" }) => {
           <h1 className="text-xl lg:text-2xl xl:text-6xl text-center lg:text-start text-gray-800 font-medium mb-4 capitalize font-lato">
             best collection for <br /> home decoration
           </h1>
-          <p className="text-black text-[12px] lg:text-sm lg:text-ellipsis text-center lg:text-start">
+          <p className="text-black text-[12px] lg:text-sm xl:text-[18px] xl:leading-6 lg:text-ellipsis text-center lg:text-start">
             Transform your living space with our curated <br /> collection of
             home decor essentials. From cozy bedroom <br /> furnishings to
             stylish living room accents, discover <br /> everything you need to

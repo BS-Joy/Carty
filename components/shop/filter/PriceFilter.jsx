@@ -24,39 +24,39 @@ const PriceFilter = ({ dictionary }) => {
     setPriceRange({ ...priceRange, [name]: Number(value) });
   };
 
-  useEffect(() => {
-    const paramsPriceRange = params.get("priceRange");
-    if (paramsPriceRange) {
-      const priceRangeObj = getPriceRangeObj(paramsPriceRange);
-      setPriceRange(priceRangeObj);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const paramsPriceRange = params.get("priceRange");
+  //   if (paramsPriceRange) {
+  //     const priceRangeObj = getPriceRangeObj(paramsPriceRange);
+  //     setPriceRange(priceRangeObj);
+  //   }
+  // }, []);
 
-  useEffect(() => {
-    const pageParams = params.get("page");
-    if (priceRange.min !== 0) {
-      if (pageParams) {
-        params.set("page", 1);
-      }
-      params.set(
-        "priceRange",
-        encodeURI(`min=${priceRange.min}&max=${priceRange.max}`)
-      );
-    } else if (priceRange.max !== 0) {
-      if (pageParams) {
-        params.set("page", 1);
-      }
-      params.set(
-        "priceRange",
-        encodeURI(`min=${priceRange.min}&max=${priceRange.max}`)
-      );
-    } else {
-      params.delete("priceRange");
-      params.delete("page");
-    }
+  // useEffect(() => {
+  //   const pageParams = params.get("page");
+  //   if (priceRange.min !== 0) {
+  //     if (pageParams) {
+  //       params.set("page", 1);
+  //     }
+  //     params.set(
+  //       "priceRange",
+  //       encodeURI(`min=${priceRange.min}&max=${priceRange.max}`)
+  //     );
+  //   } else if (priceRange.max !== 0) {
+  //     if (pageParams) {
+  //       params.set("page", 1);
+  //     }
+  //     params.set(
+  //       "priceRange",
+  //       encodeURI(`min=${priceRange.min}&max=${priceRange.max}`)
+  //     );
+  //   } else {
+  //     params.delete("priceRange");
+  //     params.delete("page");
+  //   }
 
-    replace(`${pathName}?${params.toString()}`);
-  }, [priceRange]);
+  //   replace(`${pathName}?${params.toString()}`);
+  // }, [priceRange]);
 
   return (
     <div className="pt-4">

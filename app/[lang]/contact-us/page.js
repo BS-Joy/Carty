@@ -1,7 +1,7 @@
 const ContactUsPage = () => {
   return (
     <div className="max-w-6xl mx-auto p-4">
-      <div className="  mt-8 mb-16 shadow-md  rounded-lg p-8">
+      <div className="  mt-8 mb-16 shadow-md border dark:border-primary rounded-lg p-8">
         <h2 className="text-3xl text-gray-800 dark:text-white font-extrabold text-center mb-12">
           Contact us
         </h2>

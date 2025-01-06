@@ -31,7 +31,7 @@ const ShareProduct = ({ title }) => {
   };
   return (
     <div
-      className={`rounded-md shadow-md dark:border-primary mt-4 max-w-[403px] py-4 px-6 flex gap-8 border`}
+      className={`rounded-md shadow-md dark:border-primary mt-4 max-w-[403px] py-4 px-6 flex flex-col md:flex-row gap-8 border`}
     >
       <div className="flex flex-col">
         <h1 className="text-xl font-semibold">Share</h1>
@@ -65,8 +65,8 @@ const ShareProduct = ({ title }) => {
 
       <div className="flex flex-col">
         <h1 className="text-xl font-semibold">Copy Link</h1>
-        <div className="flex gap-3 bg-gray-100 dark:bg-gray-500 px-3 py-2 my-2 rounded">
-          <p className="">
+        <div className="flex justify-between gap-3 bg-gray-100 dark:bg-gray-500 px-3 py-2 my-2 rounded">
+          <p>
             {pageUrl?.length > 15 ? `${pageUrl?.slice(0, 19)}...` : pageUrl}
           </p>
           <button onClick={copyPageLink} className="hover:text-primary">

@@ -5,6 +5,7 @@ import usFlag from "@/public/images/us-flag.png";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { FaAngleDown } from "react-icons/fa6";
+import { motion, AnimatePresence } from "motion/react";
 
 const LangSwitcher = ({ mobileNav }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,7 +54,7 @@ const LangSwitcher = ({ mobileNav }) => {
     <div
       ref={togglerRef}
       onClick={() => setIsOpen(!isOpen)}
-      className={`text-center text-gray-700 hover:border-primary my-transition relative cursor-pointer flex gap-2 items-center border px-4 rounded py-1`}
+      className={`text-center text-gray-700 hover:border-primary my-transition relative cursor-pointer flex gap-2 items-center border px-4 rounded py-1 z-10`}
     >
       <div className="text-xl">
         <Image
@@ -68,26 +69,31 @@ const LangSwitcher = ({ mobileNav }) => {
       <span className="dark:text-white">
         <FaAngleDown />
       </span>
-      <div
-        className={`absolute bg-white dark:bg-black dark:text-white rounded hover:border-primary my-transition ${
-          mobileNav ? "top-[42px]" : "top-[30px]"
-        } right-0 w-full border ${isOpen ? "visible" : "hidden"} z-10`}
-      >
-        <div
-          onClick={() => handleLangChange("bn")}
-          className="flex w-full justify-center items-center gap-2 py-1 border-b hover:bg-slate-200 dark:hover:text-black"
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: -5 }}
+          className={`absolute bg-white dark:bg-black dark:text-white rounded hover:border-primary my-transition ${
+            mobileNav ? "top-[42px]" : "top-[30px]"
+          } right-0 w-full border z-0`}
         >
-          <Image alt="bn" src={bdFlag} className="w-5 h-5" />
-          <p>{languages[1].language}</p>
-        </div>
-        <div
-          onClick={() => handleLangChange("en")}
-          className="flex w-full justify-center items-center gap-2 py-1 hover:bg-slate-200 dark:hover:text-black"
-        >
-          <Image alt="bn" src={usFlag} className="w-4 h-4" />
-          <p>{languages[0].language}</p>
-        </div>
-      </div>
+          <div
+            onClick={() => handleLangChange("bn")}
+            className="flex w-full justify-center items-center gap-2 py-1 border-b hover:bg-slate-200 dark:hover:text-black my-transition"
+          >
+            <Image alt="bn" src={bdFlag} className="w-5 h-5" />
+            <p>{languages[1].language}</p>
+          </div>
+          <div
+            onClick={() => handleLangChange("en")}
+            className="flex w-full justify-center items-center gap-2 py-1 hover:bg-slate-200 dark:hover:text-black my-transition"
+          >
+            <Image alt="bn" src={usFlag} className="w-4 h-4" />
+            <p>{languages[0].language}</p>
+          </div>
+        </motion.div>
+      )}
     </div>
   );
 };

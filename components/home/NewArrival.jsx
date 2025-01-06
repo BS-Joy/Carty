@@ -5,6 +5,7 @@ import CardSkeleton from "../loading/CardSkeleton";
 // import { auth } from "@/auth";
 import { getDictionary } from "@/app/dictionaries/dictionaries";
 import ProductCard from "../shop/product/ProductCard";
+import ProductCard3 from "../shop/product/ProductCard3";
 
 const newArrivals = [
   {
@@ -143,10 +144,10 @@ const NewArrival = async ({ lang }) => {
         {dictionary?.top_new_arrivals}
       </h2>
       {newArrivals?.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {newArrivals?.map((product) => (
             <Suspense key={product.id} fallback={<CardSkeleton />}>
-              <ProductCard
+              <ProductCard3
                 product={product}
                 dictionary={dictionary}
                 lang={lang}

@@ -189,15 +189,15 @@ const ProductListPage = async ({ params }) => {
         />
 
         {/* product lists */}
-        <Suspense>
-          <ProductList
-            total_products={count}
-            products={products}
-            dictionary={dictionary}
-            lang={lang}
-            // wishList={wishList}
-          />
-        </Suspense>
+        {/* <Suspense> */}
+        <ProductList
+          total_products={count}
+          products={products}
+          dictionary={dictionary}
+          lang={lang}
+          // wishList={wishList}
+        />
+        {/* </Suspense> */}
       </div>
     </>
   );

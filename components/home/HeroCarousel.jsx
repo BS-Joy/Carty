@@ -7,11 +7,8 @@ import "@/app/style/carousel-style.css";
 import hero from "@/public/images/banner-bg.jpg";
 import hero2 from "@/public/images/hero_banner.jpg";
 
-const imageLink =
-  "https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
-
 const HeroCarousel = (props) => {
-  const { slides, options } = props;
+  // const { slides, options } = props;
   const OPTIONS = { direction: "rtl", loop: true };
   const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS, [Autoplay()]);
 

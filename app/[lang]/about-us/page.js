@@ -1,9 +1,8 @@
 import Image from "next/image";
-import React from "react";
 
 const Page = () => {
   return (
-    <div className="container py-16 flex flex-col items-center gap-10 px-16">
+    <div className="container py-16 flex flex-col items-center gap-10 px-8 xl:px-16">
       <div className="flex flex-col items-center">
         <h1 className="font-lato text-4xl text-center font-bold">About Us</h1>
         <p className="max-w-2xl text-center text-slate-500 dark:text-slate-400 mt-4">
@@ -12,7 +11,7 @@ const Page = () => {
         </p>
       </div>
 
-      <div className="flex justify-between gap-8">
+      <div className="flex flex-col xl:flex-row items-center xl:items-start justify-between gap-8">
         <Image
           src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="demo"

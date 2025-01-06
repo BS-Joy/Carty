@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
+import dbConnect from "@/services/connectDb";
 
 const lato = localFont({
   src: "./fonts/Lato-Regular.ttf",
@@ -28,8 +29,9 @@ export const metadata = {
 };
 
 export default async function RootLayout({ children }) {
+  await dbConnect();
   return (
-    <ClerkProvider>
+    <ClerkProvider dynamic>
       <html lang="en" suppressHydrationWarning>
         <body
           className={`${lato.variable} ${openSans.variable} ${JosefinSans.variable} antialiased`}

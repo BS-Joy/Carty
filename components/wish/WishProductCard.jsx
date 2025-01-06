@@ -80,9 +80,9 @@ const WishProductCard = ({ product, lang }) => {
               {product?.availability ? "In Stock" : "Out of Stock"}
             </span>
             {/* price */}
-            <div className="text-primary text-lg font-semibold">
+            <span className="text-primary text-lg font-semibold">
               $ {product?.price}
-            </div>
+            </span>
           </p>
         </div>
       </div>
