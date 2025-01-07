@@ -8,7 +8,7 @@ const ProductCard3 = ({ product, dictionary, lang, wishList }) => {
     <div className="max-w-md w-full">
       <div className="bg-white dark:bg-dark rounded-lg shadow-xl overflow-hidden hover:shadow-2xl my-transition">
         <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-400 to-indigo-600 opacity-75"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary to-indigo-600 opacity-75"></div>
           <Image
             width={358}
             height={265}

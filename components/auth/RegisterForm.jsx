@@ -179,7 +179,7 @@ const RegisterForm = ({ dictionary, lang }) => {
       <div className="mt-4">
         <button
           type="submit"
-          className="flex justify-center items-center gap-2 w-full py-2 text-center text-white bg-primary border border-primary rounded hover:bg-transparent hover:text-primary transition uppercase font-roboto font-medium"
+          className="flex justify-center items-center gap-2 w-full py-2 text-center text-white bg-primary border border-primary rounded hover:shadow-night-button my-transition uppercase font-medium"
         >
           {loading ? (
             <>

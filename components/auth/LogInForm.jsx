@@ -95,7 +95,7 @@ const LoginForm = ({ dictionary, lang, productId, quantity }) => {
       <div className="mt-4">
         <button
           type="submit"
-          className="w-full flex justify-center items-center gap-2 py-2 text-center text-white bg-primary border border-primary rounded hover:bg-transparent hover:text-primary transition uppercase font-roboto font-medium"
+          className="w-full flex justify-center items-center gap-2 py-2 text-center text-white bg-primary border border-primary rounded hover:bg-transparent hover:text-primary transition uppercase font-medium"
         >
           {loading ? (
             <>

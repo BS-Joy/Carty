@@ -28,7 +28,7 @@ const Page = () => {
             necessitatibus nihil magni repudiandae nisi?
           </p>
           <button
-            className="mt-8 bg-primary border border-primary text-white px-6 py-2 font-medium 
+            className="mt-8 bg-primary border border-primary text-white px-6 py-2 text-sm font-medium 
                     rounded-md hover:shadow-night-button my-transition"
           >
             Get in Touch

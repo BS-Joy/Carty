@@ -70,20 +70,22 @@ const WishProductCard = ({ product, lang }) => {
         {/* details */}
         <div>
           <Link href={`/${lang}/shop/${product?.product_id}`}>
-            <h2 className="text-gray-800 dark:text-gray-300 text-xl font-medium uppercase hover:text-primary transition">
+            <h2 className="text-gray-800 dark:text-gray-300 text-xl font-medium uppercase hover:text-primary my-transition mb-3">
               {product?.title}
             </h2>
           </Link>
-          <p className="text-gray-500 dark:text-gray-400 text-sm">
-            Availability:{" "}
-            <span className="text-green-600">
-              {product?.availability ? "In Stock" : "Out of Stock"}
-            </span>
+          <div className="text-gray-500 dark:text-gray-400 text-sm flex flex-col">
+            <p>
+              Availability:{" "}
+              <span className="text-green-600">
+                {product?.availability ? "In Stock" : "Out of Stock"}
+              </span>
+            </p>
             {/* price */}
-            <span className="text-primary text-lg font-semibold">
+            <p className="text-primary text-lg font-semibold">
               $ {product?.price}
-            </span>
-          </p>
+            </p>
+          </div>
         </div>
       </div>
 
@@ -92,7 +94,7 @@ const WishProductCard = ({ product, lang }) => {
         <form action={handleAddToCart}>
           <button
             type="submit"
-            className="px-6 flex items-center gap-2 py-2 text-center text-sm text-white bg-primary border border-primary rounded  my-transition uppercase font-medium hover:shadow-night-button hover:bg-primary hover:text-white"
+            className="px-6 py-2 flex items-center gap-2 text-sm text-white bg-primary border border-primary rounded my-transition uppercase font-medium hover:shadow-night-button"
           >
             <FaBagShopping />
             add to cart
@@ -102,7 +104,7 @@ const WishProductCard = ({ product, lang }) => {
         <form action={handleWishList}>
           <button
             type="submit"
-            className="px-6 flex items-center gap-2 py-2 text-center text-sm text-white bg-primary border border-primary rounded  my-transition uppercase font-medium hover:shadow-night-button hover:bg-primary hover:text-white"
+            className="px-6 py-2 flex items-center gap-2 text-sm text-white bg-primary border border-primary rounded my-transition uppercase font-medium hover:shadow-night-button"
           >
             <FaTrash />
             remove

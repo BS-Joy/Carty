@@ -34,7 +34,8 @@ export default async function middleware(request) {
   );
 
   // Redirect to locale-prefixed URL if no locale is present in the pathname
-  if (!pathnameHasLocale) {
+  if (!pathnameHasLocale && !pathname.startsWith("/api")) {
+    console.log(pathname);
     const locale = getLocale(request);
     request.nextUrl.pathname = `/${locale}${pathname}`;
     return NextResponse.redirect(request.nextUrl);

@@ -6,43 +6,48 @@ import { blurImageUrl } from "@/utils/getBlurImage";
 import { Suspense } from "react";
 import ImageSkeleton from "../loading/ImageSkeleton";
 import { getDictionary } from "@/app/dictionaries/dictionaries";
+import { getCategories } from "@/queries/categoryQueries";
 
-const categories = [
-  {
-    id: 1,
-    thumbnail:
-      "https://plus.unsplash.com/premium_photo-1670360414946-e33a828d1d52?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Random image 1
-    category_name: "Category 1",
-  },
-  {
-    id: 2,
-    thumbnail:
-      "https://plus.unsplash.com/premium_photo-1670360414946-e33a828d1d52?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Random image 2
-    category_name: "Category 2",
-  },
-  {
-    id: 3,
-    thumbnail:
-      "https://plus.unsplash.com/premium_photo-1670360414946-e33a828d1d52?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Random image 3
-    category_name: "Category 3",
-  },
-  {
-    id: 4,
-    thumbnail:
-      "https://plus.unsplash.com/premium_photo-1670360414946-e33a828d1d52?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Random image 4
-    category_name: "Category 4",
-  },
-  {
-    id: 5,
-    thumbnail:
-      "https://plus.unsplash.com/premium_photo-1670360414946-e33a828d1d52?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Random image 5
-    category_name: "Category 5",
-  },
-];
+// const categories = [
+//   {
+//     id: 1,
+//     thumbnail:
+//       "https://plus.unsplash.com/premium_photo-1670360414946-e33a828d1d52?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Random image 1
+//     category_name: "Category 1",
+//   },
+//   {
+//     id: 2,
+//     thumbnail:
+//       "https://plus.unsplash.com/premium_photo-1670360414946-e33a828d1d52?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Random image 2
+//     category_name: "Category 2",
+//   },
+//   {
+//     id: 3,
+//     thumbnail:
+//       "https://plus.unsplash.com/premium_photo-1670360414946-e33a828d1d52?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Random image 3
+//     category_name: "Category 3",
+//   },
+//   {
+//     id: 4,
+//     thumbnail:
+//       "https://plus.unsplash.com/premium_photo-1670360414946-e33a828d1d52?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Random image 4
+//     category_name: "Category 4",
+//   },
+//   {
+//     id: 5,
+//     thumbnail:
+//       "https://plus.unsplash.com/premium_photo-1670360414946-e33a828d1d52?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Random image 5
+//     category_name: "Category 5",
+//   },
+// ];
 
 const Category = async ({ lang }) => {
   const dictionary = await getDictionary(lang);
-  // const categories = await getAllCategories();
+  const categoryLists = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/category`
+  );
+
+  const categories = await categoryLists.json();
   return (
     <>
       <div className="container py-16">
@@ -65,6 +70,7 @@ const Category = async ({ lang }) => {
                     height={308}
                     placeholder="blur"
                     blurDataURL={blurImageUrl}
+                    loading="lazy"
                   />
                   <Link
                     href="#"

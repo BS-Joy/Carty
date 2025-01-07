@@ -67,7 +67,7 @@ const CartProductCard = ({ cart, lang }) => {
       <form action={handleDelete}>
         <button
           type="submit"
-          className="px-6 py-2 flex items-center gap-2 text-center text-sm text-white bg-primary border border-primary rounded my-transition uppercase font-roboto font-medium hover:shadow-night-button"
+          className="px-6 py-2 flex items-center gap-2 text-sm text-white bg-primary border border-primary rounded my-transition uppercase font-medium hover:shadow-night-button"
         >
           <FaTrash />
           Remove From Cart

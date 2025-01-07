@@ -1,3 +1,5 @@
+import MyButton from "@/components/MyButton";
+
 const ContactUsPage = () => {
   return (
     <div className="max-w-6xl mx-auto p-4">
@@ -27,10 +29,7 @@ const ContactUsPage = () => {
             rows="6"
             className="w-full border dark:border-primary rounded px-4 text-sm pt-3 focus:outline focus:border-primary focus:outline-primary dark:text-primary"
           ></textarea>
-          <button
-            type="button"
-            className="text-white w-full bg-primary hover:shadow-night-button rounded text-sm px-6 py-3 !mt-6 my-transition"
-          >
+          <MyButton classNames="w-full !mt-6" type="button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16px"
@@ -47,7 +46,11 @@ const ContactUsPage = () => {
               />
             </svg>
             Send Message
-          </button>
+          </MyButton>
+          {/* <button
+            type="button"
+            className="text-white w-full bg-primary hover:shadow-night-button rounded text-sm px-6 py-2 border border-primary !mt-6 my-transition"
+          ></button> */}
         </form>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mt-12">
