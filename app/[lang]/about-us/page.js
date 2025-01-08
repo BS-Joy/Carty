@@ -1,3 +1,4 @@
+import MyButton from "@/components/MyButton";
 import Image from "next/image";
 
 const Page = () => {
@@ -27,12 +28,7 @@ const Page = () => {
             quaerat rem minus dolorum esse? Laboriosam ipsam est beatae,
             necessitatibus nihil magni repudiandae nisi?
           </p>
-          <button
-            className="mt-8 bg-primary border border-primary text-white px-6 py-2 text-sm font-medium 
-                    rounded-md hover:shadow-night-button my-transition"
-          >
-            Get in Touch
-          </button>
+          <MyButton classNames="mt-8">Get in Touch</MyButton>
         </div>
       </div>
     </div>

@@ -5,9 +5,13 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import Spinner from "../loading/ButtonSpinner";
+import MyButton from "../MyButton";
+import InputField from "../form/InputField";
+import { useForm } from "react-hook-form";
 // import Spinner from "../loading/ButtonSpinner";
 
 const LoginForm = ({ dictionary, lang, productId, quantity }) => {
+  const { register } = useForm();
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -34,40 +38,22 @@ const LoginForm = ({ dictionary, lang, productId, quantity }) => {
       )}
       <div className="space-y-2">
         {/* email */}
-        <div>
-          <label
-            htmlFor="email"
-            className="text-gray-600 dark:text-gray-300 mb-2 block"
-          >
-            {dictionary?.email}
-          </label>
-          <input
-            required
-            type="email"
-            name="email"
-            id="email"
-            className="block w-full border border-gray-300 dark:border-gray-500 px-4 py-3 text-gray-600 dark:text-primary text-sm rounded focus:ring-0 focus:border-primary dark:focus:outline-none dark:focus:border dark:focus:border-primary placeholder-gray-400"
-            placeholder="youremail.@domain.com"
-          />
-        </div>
+        <InputField
+          label={dictionary?.email}
+          name="email"
+          type="email"
+          placeholder="youremail.@domain.com"
+          register={register}
+        />
 
         {/* password */}
-        <div>
-          <label
-            htmlFor="password"
-            className="text-gray-600 dark:text-gray-300 mb-2 block"
-          >
-            {dictionary?.password}
-          </label>
-          <input
-            required
-            type="password"
-            name="password"
-            id="password"
-            className="block w-full border border-gray-300 dark:border-gray-500 px-4 py-3 text-gray-600 dark:text-primary text-sm rounded focus:ring-0 focus:border-primary dark:focus:outline-none dark:focus:border dark:focus:border-primary placeholder-gray-400"
-            placeholder="*******"
-          />
-        </div>
+        <InputField
+          label={dictionary?.password}
+          name="password"
+          type="password"
+          placeholder="*******"
+          register={register}
+        />
       </div>
 
       {/* remember me checker */}
@@ -93,10 +79,7 @@ const LoginForm = ({ dictionary, lang, productId, quantity }) => {
 
       {/* submit button */}
       <div className="mt-4">
-        <button
-          type="submit"
-          className="w-full flex justify-center items-center gap-2 py-2 text-center text-white bg-primary border border-primary rounded hover:bg-transparent hover:text-primary transition uppercase font-medium"
-        >
+        <MyButton type="submit" classNames="w-full uppercase">
           {loading ? (
             <>
               <Spinner /> <span>Logging in...</span>
@@ -104,7 +87,7 @@ const LoginForm = ({ dictionary, lang, productId, quantity }) => {
           ) : (
             dictionary?.login
           )}
-        </button>
+        </MyButton>
       </div>
     </form>
   );

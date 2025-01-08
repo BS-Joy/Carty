@@ -1,4 +1,5 @@
 import React from "react";
+import MyButton from "../MyButton";
 
 const Search2 = () => {
   return (
@@ -10,9 +11,10 @@ const Search2 = () => {
         name="text"
         type="text"
       />
-      <button className="bg-primary px-4 rounded-md ml-3 text-white hover:shadow-night-button my-transition">
-        Search
-      </button>
+      <MyButton classNames="px-4 ml-3">Search</MyButton>
+      {/* <button className="bg-primary px-4 rounded-md ml-3 text-white hover:shadow-night-button my-transition">
+        
+      </button> */}
     </div>
   );
 };

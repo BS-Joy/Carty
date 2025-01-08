@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import toast from "react-hot-toast";
+import MyButton from "../MyButton";
 
 const WishProductCard = ({ product, lang }) => {
   const router = useRouter();
@@ -92,23 +93,23 @@ const WishProductCard = ({ product, lang }) => {
       {/* buttons */}
       <div className=" flex gap-4 items-center">
         <form action={handleAddToCart}>
-          <button
+          <MyButton
             type="submit"
-            className="px-6 py-2 flex items-center gap-2 text-sm text-white bg-primary border border-primary rounded my-transition uppercase font-medium hover:shadow-night-button"
+            classNames="flex items-center gap-2 text-sm uppercase"
           >
             <FaBagShopping />
             add to cart
-          </button>
+          </MyButton>
         </form>
 
         <form action={handleWishList}>
-          <button
+          <MyButton
             type="submit"
-            className="px-6 py-2 flex items-center gap-2 text-sm text-white bg-primary border border-primary rounded my-transition uppercase font-medium hover:shadow-night-button"
+            classNames="flex items-center gap-2 text-sm uppercase"
           >
             <FaTrash />
             remove
-          </button>
+          </MyButton>
         </form>
       </div>
     </div>

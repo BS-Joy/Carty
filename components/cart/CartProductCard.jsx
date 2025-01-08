@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
+import MyButton from "../MyButton";
 
 const CartProductCard = ({ cart, lang }) => {
   const handleDelete = async () => {
@@ -65,13 +66,13 @@ const CartProductCard = ({ cart, lang }) => {
 
       {/* button */}
       <form action={handleDelete}>
-        <button
+        <MyButton
           type="submit"
-          className="px-6 py-2 flex items-center gap-2 text-sm text-white bg-primary border border-primary rounded my-transition uppercase font-medium hover:shadow-night-button"
+          classNames="flex items-center gap-2 text-sm uppercase"
         >
           <FaTrash />
           Remove From Cart
-        </button>
+        </MyButton>
       </form>
     </div>
   );

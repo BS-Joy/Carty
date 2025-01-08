@@ -6,7 +6,7 @@ const MyButton = ({ children, classNames, ...props }) => {
   return (
     <button
       className={CN(
-        " bg-primary border border-primary text-white px-6 py-2 text-sm font-medium rounded-md hover:shadow-night-button my-transition",
+        " bg-primary border border-primary text-white px-6 py-2 font-medium rounded hover:shadow-night-button my-transition",
         classNames
       )}
       {...props}

@@ -1,6 +1,8 @@
+import InputField from "@/components/form/InputField";
 import MyButton from "@/components/MyButton";
 
 const ContactUsPage = () => {
+  const register = () => true;
   return (
     <div className="max-w-6xl mx-auto p-4">
       <div className="  mt-8 mb-16 shadow-md border dark:border-primary rounded-lg p-8">
@@ -9,25 +11,28 @@ const ContactUsPage = () => {
         </h2>
 
         <form className="space-y-3 max-w-xl mx-auto text-gray-800">
-          <input
-            type="text"
-            placeholder="Name"
-            className="w-full border dark:border-primary rounded py-3 px-4 text-sm focus:outline focus:border-primary focus:outline-primary dark:text-primary"
+          <InputField
+            type={"text"}
+            name={"name"}
+            placeholder={"Name"}
+            register={register}
           />
-          <input
-            type="email"
-            placeholder="Email"
-            className="w-full border dark:border-primary rounded py-3 px-4 text-sm focus:outline focus:border-primary focus:outline-primary dark:text-primary"
+          <InputField
+            type={"email"}
+            name={"email"}
+            placeholder={"Email"}
+            register={register}
           />
-          <input
-            type="email"
-            placeholder="Phone No."
-            className="w-full border dark:border-primary rounded py-3 px-4 text-sm focus:outline focus:border-primary focus:outline-primary dark:text-primary"
+          <InputField
+            type={"tel"}
+            name={"Phone No."}
+            placeholder={"Phone No."}
+            register={register}
           />
           <textarea
             placeholder="Message"
             rows="6"
-            className="w-full border dark:border-primary rounded px-4 text-sm pt-3 focus:outline focus:border-primary focus:outline-primary dark:text-primary"
+            className="input_field"
           ></textarea>
           <MyButton classNames="w-full !mt-6" type="button">
             <svg

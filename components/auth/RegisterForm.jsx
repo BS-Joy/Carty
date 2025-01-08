@@ -7,6 +7,7 @@ import InputField from "../form/InputField";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import MyButton from "../MyButton";
 
 const formSchema = z
   .object({
@@ -177,10 +178,7 @@ const RegisterForm = ({ dictionary, lang }) => {
 
       {/* submit button */}
       <div className="mt-4">
-        <button
-          type="submit"
-          className="flex justify-center items-center gap-2 w-full py-2 text-center text-white bg-primary border border-primary rounded hover:shadow-night-button my-transition uppercase font-medium"
-        >
+        <MyButton type="submit" classNames="w-full uppercase">
           {loading ? (
             <>
               <Spinner /> <span>Signing up...</span>
@@ -188,7 +186,7 @@ const RegisterForm = ({ dictionary, lang }) => {
           ) : (
             dictionary.create_new_account
           )}
-        </button>
+        </MyButton>
       </div>
     </form>
   );
